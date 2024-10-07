@@ -1,23 +1,3 @@
-```mermaid
-graph TD;
-    User[User] --> |Submits Request| Django;
-    Django --> |Fetches Questionnaires| GitHub;
-    Django --> |Reads Data| PostgreSQL;
-    Django --> |Sends Data to| PostgreSQL;
-    Django --> |Updates/Stores Files| GitHub;
-    Django --> |Stores Metadata| GitHub;
-
-    subgraph "DRT System"
-        Django
-        PostgreSQL
-    end
-
-    subgraph "DRT Data Store"
-        GitHub
-    end
-
-
-
 ---
 
 ### **Explanation of the Diagram**:
@@ -51,4 +31,26 @@ graph TD;
 ---
 
 This diagram represents a **modular system** where **GitHub** stores static, rarely changed data, and **PostgreSQL** manages dynamic relational data in the DaRT system. Django acts as the core processing unit, fetching data from these stores and interacting with users.
+
+
+
+```mermaid
+graph TD;
+    User[User] --> |Submits Request| Django;
+    Django --> |Fetches Questionnaires| GitHub;
+    Django --> |Reads Data| PostgreSQL;
+    Django --> |Sends Data to| PostgreSQL;
+    Django --> |Updates/Stores Files| GitHub;
+    Django --> |Stores Metadata| GitHub;
+
+    subgraph "DRT System"
+        Django
+        PostgreSQL
+    end
+
+    subgraph "DRT Data Store"
+        GitHub
+    end
+
+
 
