@@ -1,3 +1,5 @@
+### **Explanation of the Diagram**:
+
 1. **User Interaction**:
    - **User** submits a **request** through Django.
    
